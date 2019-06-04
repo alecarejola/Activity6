@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @trainer.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @trainer.address %>
+</p>
+
+<p>
+  <strong>Current weight:</strong>
+  <%= @trainer.current_weight %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @trainer.height %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @trainer.gender %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @trainer.email_address %>
+</p>
+
+<p>
+  <strong>Client ID:</strong>
+  <%= @trainer.client_id %>
+</p>
+
+<%= link_to 'Edit', edit_trainer_path(@trainer) %> |
+<%= link_to 'Back', trainers_path %>
+
+<%= render 'show_index', clients: Client.where(trainer_id: @trainer.id) %>

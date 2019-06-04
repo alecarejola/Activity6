@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Clients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Current weight</th>
+      <th>Height</th>
+      <th>Gender</th>
+      <th>Email address</th>
+      <th>Trainer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% clients.each do |client| %>
+      <tr>
+        <td><%= client.name %></td>
+        <td><%= client.address %></td>
+        <td><%= client.current_weight %></td>
+        <td><%= client.height %></td>
+        <td><%= client.gender %></td>
+        <td><%= client.email_address %></td>
+        <td><%= client.trainer_id %></td>
+        <td><%= link_to 'Show', client %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<!-- <%= link_to 'New Client', new_client_path %> -> scrapped new
